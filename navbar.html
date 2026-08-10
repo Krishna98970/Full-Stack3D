@@ -1,0 +1,64 @@
+
+<html>
+<head>
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Remove default spacing */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: radius 50px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: black;
+    color: white;
+     border: radius 50px;
+    padding: 15px 40px;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0;
+    color: darkblue;
+    font-size: 35px;
+}
+    </style>
+</head>
+<body>
+<h1>Task2- Navigation bar</h1>
+<nav class="navbar">
+    <div class="logo">MyWebsite</div>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>
