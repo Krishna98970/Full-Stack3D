@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+
+    <style>
+        .two{
+            color:green;
+        }
+        li[for="label"]{
+            color:yellow;
+        }
+        span{
+            color:red;
+        }
+        ul>li.two>span{
+            color:violet;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="two">Universal</li>
+        <li id="one">ID</li>
+        <li class="two">Class
+            <span>Class</span>
+        </li>
+        <li for="label">Attribute</li>
+        <li>Element<span>E1</span></li>
+        <li>Combinators</li>
+        <li>Pseudo class</li>
+        <li>Pseudo Element</li>
+
+    </ul>
+</body>
+</html>

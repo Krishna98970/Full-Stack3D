@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Gradients</title>
+
+    <style>
+
+        /* Common properties for all boxes */
+        .box1, .box2, .box3 {
+            width: 500px;
+            height: 500px;
+            margin-bottom: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Linear Gradient */
+        .box1 {
+            background: linear-gradient(
+                to right,
+                red,
+                orange
+               
+            );
+        }
+
+        /* Radial Gradient */
+        .box2 {
+            background: radial-gradient(
+                rgb(15, 1, 1) 5%,
+                rgb(90, 172, 235) 30%,
+                rgb(50, 47, 47) 50%
+            );
+
+            flex-direction: column;
+        }
+
+        /* Conic Gradient */
+        .box3 {
+    background: conic-gradient(
+        rgb(83, 83, 226) 0% 70%,
+        lightgray 70% 100%
+    );
+
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+        /* Heading */
+        h1 {
+            color: white;
+            font-size: 40px;
+            margin: 0;
+        }
+
+        /* Paragraph */
+        p {
+            color: white;
+            font-size: 25px;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Linear Gradient -->
+    <div class="box1">
+        <h1>Linear Gradient</h1>
+    </div>
+
+    <!-- Radial Gradient -->
+    <div class="box2">
+        <h1>70%</h1>
+        <p>lorem</p>
+    </div>
+
+    <!-- Conic Gradient -->
+    <div class="box3">
+        <h1>70%</h1>
+        <p>Conic Gradient</p>
+    </div>
+
+</body>
+</html>
