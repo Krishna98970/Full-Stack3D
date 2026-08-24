@@ -4,7 +4,7 @@
     <title>My Webpage</title>
 
     <style>
-        .two{
+        /*.two{
             color:green;
         }
         li[for="label"]{
@@ -15,6 +15,12 @@
         }
         ul>li.two>span{
             color:violet;
+        }*/
+        li:nth-child(odd){
+            color:violet;
+        }
+        li.rtn:hover{
+            color:red;
         }
     </style>
 </head>
@@ -29,7 +35,7 @@
         <li for="label">Attribute</li>
         <li>Element<span>E1</span></li>
         <li>Combinators</li>
-        <li>Pseudo class</li>
+        <li class="rtn">Pseudo class</li>
         <li>Pseudo Element</li>
 
     </ul>
