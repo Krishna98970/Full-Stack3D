@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>MyWebpagfe</title>
+        <style>
+            section h2{
+                color:blue; 
+                /* direct dadaji order to all chote log */
+            }
+            section>h2{
+                color:greenyellow; 
+                /* ye h2 jo direct connect nhi he section s  */
+
+            }
+            h2~p{
+                color:red;
+                font-weight:900px;
+                /* h2 ke andr jitne p ho sbko aplly property */
+            }
+            h2+p{
+                color:violet;
+            }
+
+           
+        </style>
+    </head>
+    <body>
+        <section>
+            <h2>Heading 1</h2>
+            <p>PARA 1</p>
+            <p>PARA 2</p>
+            <div>
+                <h2>Heading 2</h2>
+            </div>
+        </section>
+        
+
+    </body>
+</html>
