@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>newweb</title>
+
+    <style>
+        .container {
+            display: grid;
+            outline: 1px solid black;
+            height:400px;
+            width: 400px;
+            grid-template-areas:
+                "box1 box2 box2"
+                "box1 box3 box6"
+                "box4 box5 box6";
+                gap:3px;
+
+            
+        }
+
+        .container > div {
+            outline: 1px dashed grey;
+            
+        }
+
+        #box1 {
+            grid-area: box1;
+            background-color:rgb(45, 170, 47)
+        }
+
+        #box2 {
+            grid-area: box2;
+             background-color:rgb(133, 185, 237)
+        }
+
+        #box3 {
+            grid-area: box3;
+             background-color:red
+        }
+
+        #box4 {
+            grid-area: box4;
+             background-color:rgb(197, 228, 72)
+        }
+
+        #box5 {
+            grid-area: box5;
+             background-color:rgb(190, 59, 229)
+        }
+
+        #box6 {
+            grid-area: box6;
+             background-color:rgb(230, 232, 217)
+        }
+
+        p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="box1"><p>1 </p></div>
+        <div id="box2"><p>2</p></div>
+        <div id="box3"><p>3</p></div>
+        <div id="box4"><p>4</p></div>
+        <div id="box5"><p>5</p></div>
+        <div id="box6"><p>6</p></div>
+    </div>
+</body>
+</html>
