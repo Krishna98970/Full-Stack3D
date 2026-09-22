@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            My Webpage
+        </title>
+        <style>
+            @layer special,base;
+            @layer base{
+                .btn{
+                    font-size:35px;
+                }
+            }
+            @layer special{
+                .btn-submit{
+                    font-size:40px;
+                }
+            }
+        </style>
+        <body>
+            <button class="btn-submit btn">Click Me!</button>
+        </body>
+    </head>
+</html>

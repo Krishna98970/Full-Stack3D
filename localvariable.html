@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title> My Webpage</title>
+        <style>
+            :root{
+                --primary-color:red;
+                --size:30px;
+            }
+            /* Local variable */
+            div{
+                --primary-color:blue;
+            }
+            h2{
+                color:var(--primary-color);
+                font-size:var(--size);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Hello World!</h2>
+        <div>
+            <h2>Hello World!</h2>
+        </div>
+       
+    </body>
+</html>
