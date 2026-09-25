@@ -5,200 +5,91 @@
       <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <!-- Filter + Products -->
-<div class="flex gap-5 mt-3">
+    <div class="bg-blue-200 w-[900px] h-[600px]"> 
+        <div>
+        <h2 class="text-lg text-red-600"><b>      Task 2 E-Commerce Product Listing</b>        </h2>
+        <p class="text-xs"> Create a responsive product catalogue using CSS Grid for products and Flexbox inside each card.</p>     
 
-    <!-- FILTER SIDEBAR -->
-    <div class="bg-yellow-100 w-[150px] h-[400px]">
-
-        <h2 class="font-bold text-lg">Filters</h2>
-
-        <hr class="w-[150px] border-t-4 border-black">
-
-        <h3 class="font-semibold mt-6">Category</h3>
-
-        <div class="mt-2">
-            <label class="block">
-                <input type="checkbox"> Laptops
-            </label>
-
-            <label class="block">
-                <input type="checkbox"> Desktops
-            </label>
-
-            <label class="block">
-                <input type="checkbox"> Tablets
-            </label>
-
-            <label class="block">
-                <input type="checkbox"> Accessories
-            </label>
         </div>
+        <div class="bg-blue-50 w-[500px] h-[500px] mt-5">
+            <nav class="h-[70px] bg-white flex items-center justify-between px-6">
 
-        <h3 class="font-semibold mt-6">Price Range</h3>
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-blue-600">
+        ShopKart
+    </h1>
 
-        <div class="mt-2">
-            <label class="block">
-                <input type="checkbox"> 1000-20000
-            </label>
+    <!-- Search Box -->
+    <div class="flex w-[200px]">
+        <input 
+            type="text"
+            placeholder="Search"
+            class="w-full border border-gray-300 rounded-l px-4 py-2 outline-none"
+        >
 
-            <label class="block">
-                <input type="checkbox"> 20000-40000
-            </label>
-
-            <label class="block">
-                <input type="checkbox"> 50000-80000
-            </label>
-
-            <label class="block">
-                <input type="checkbox"> 80000-100000
-            </label>
-
-            <button class="bg-blue-600 text-white px-3 py-1 rounded mt-4">
-                Apply Filters
-            </button>
-        </div>
-
+        <button class="bg-blue-600 text-white px-5 py-2 rounded-r">
+            🔍
+        </button>
     </div>
 
-
-    <!-- PRODUCTS -->
-    <div class="grid grid-cols-2 gap-4 flex-1">
-
-        <!-- Card 1 -->
-        <div class="bg-white w-[150px] p-3 rounded shadow flex flex-col">
-            <img src="images.jpeg" class="w-full h-[90px] object-contain">
-
-            <h3 class="font-semibold text-sm mt-2">
-                Wireless Headphones
-            </h3>
-
-            <p class="text-xs text-gray-500">
-                High quality sound.
-            </p>
-
-            <h2 class="font-bold mt-2">
-                ₹1,999
-            </h2>
-
-            <button class="bg-blue-600 text-white text-sm py-1 rounded mt-2">
-                Buy Now
-            </button>
-        </div>
-
-
-        <!-- Card 2 -->
-        <div class="bg-white w-[150px] p-3 rounded shadow flex flex-col">
-            <img src="download (1).webp" class="w-full h-[90px] object-contain">
-
-            <h3 class="font-semibold text-sm mt-2">
-                Fitness Band
-            </h3>
-
-            <p class="text-xs text-gray-500">
-                Track your daily fitness.
-            </p>
-
-            <h2 class="font-bold mt-2">
-                ₹2,499
-            </h2>
-
-            <button class="bg-blue-600 text-white text-sm py-1 rounded mt-2">
-                Buy Now
-            </button>
-        </div>
-
-
-        <!-- Card 3 -->
-        <div class="bg-white w-[150px] p-3 rounded shadow flex flex-col">
-            <img src="download (2).webp" class="w-full h-[90px] object-contain">
-
-            <h3 class="font-semibold text-sm mt-2">
-                Bluetooth Speaker
-            </h3>
-
-            <p class="text-xs text-gray-500">
-                Clear and powerful sound.
-            </p>
-
-            <h2 class="font-bold mt-2">
-                ₹2,299
-            </h2>
-
-            <button class="bg-blue-600 text-white text-sm py-1 rounded mt-2">
-                Buy Now
-            </button>
-        </div>
-
-
-        <!-- Card 4 -->
-        <div class="bg-white w-[150px] p-3 rounded shadow flex flex-col">
-            <img src="downloaded.webp" class="w-full h-[90px] object-contain">
-
-            <h3 class="font-semibold text-sm mt-2">
-                DSLR Camera
-            </h3>
-
-            <p class="text-xs text-gray-500">
-                Capture every moment.
-            </p>
-
-            <h2 class="font-bold mt-2">
-                ₹24,999
-            </h2>
-
-            <button class="bg-blue-600 text-white text-sm py-1 rounded mt-2">
-                Buy Now
-            </button>
-        </div>
-
-
-        <!-- Card 5 -->
-        <div class="bg-white w-[150px] p-3 rounded shadow flex flex-col">
-            <img src="shopping.webp" class="w-full h-[90px] object-contain">
-
-            <h3 class="font-semibold text-sm mt-2">
-                Gaming Mouse
-            </h3>
-
-            <p class="text-xs text-gray-500">
-                Fast and smooth gaming.
-            </p>
-
-            <h2 class="font-bold mt-2">
-                ₹999
-            </h2>
-
-            <button class="bg-blue-600 text-white text-sm py-1 rounded mt-2">
-                Buy Now
-            </button>
-        </div>
-
-
-        <!-- Card 6 -->
-        <div class="bg-white w-[150px] p-3 rounded shadow flex flex-col">
-            <img src="https://via.placeholder.com/200x150"
-                 class="w-full h-[90px] object-contain">
-
-            <h3 class="font-semibold text-sm mt-2">
-                Keyboard
-            </h3>
-
-            <p class="text-xs text-gray-500">
-                Comfortable typing.
-            </p>
-
-            <h2 class="font-bold mt-2">
-                ₹1,499
-            </h2>
-
-            <button class="bg-blue-600 text-white text-sm py-1 rounded mt-2">
-                Buy Now
-            </button>
-        </div>
-
+    <!-- Right side -->
+    <div class="flex gap-3">
+        <button>Login</button>
+        <button>Cart</button>
     </div>
+
+</nav>
+<div class=" bg-yellow-100 w-[150px] h-[400px] mt-3">
+
+    <h2 class="font-bold text-lg">Filters</h2>
+    <hr class="w-[150px] border-t-8 border-black">
+
+    <h3 class="font-semibold mt-6">Category</h3>
+
+    <div class="mt-2">
+        <label class="block">
+            <input type="checkbox"> Laptops
+        </label>
+
+        <label class="block">
+            <input type="checkbox"> Desktops
+        </label>
+
+        <label class="block">
+            <input type="checkbox"> Tablets
+        </label>
+
+        <label class="block">
+            <input type="checkbox"> Accessories
+        </label>
+    </div>
+     <h3 class="font-semibold mt-6">Price Range</h3>
+        <div class="mt-2">
+        <label class="block">
+            <input type="checkbox"> 1000-20000
+        </label>
+
+        <label class="block">
+            <input type="checkbox"> 20000-40000
+        </label>
+
+        <label class="block">
+            <input type="checkbox"> 500000-80000
+        </label>
+
+        <label class="block">
+            <input type="checkbox"> 800000-100000
+        </label>
+        <button class="bg-red-200 rounded-r mt-4 ml-7">Aplly Filters</button>
+    </div>
+
 
 </div>
+
+        </div>
+        
+    </div>
+
+
 </body>
 </html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: "Inter", sans-serif;
+                background: #F1F5F9;
+                color: #0F172A;
+            }
+            .dashboard {
+                display: flex;
+                min-height: 100vh;
+            }
+            .sidebar {
+                width: 240px;
+                background: #0F172A;
+                color: #CBD5E1;
+                padding: 20px 14px;
+                position: sticky;
+                top: 0;
+                height: 100vh;
+                flex-shrink: 0;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: white;
+                font-weight: 600;
+                margin-bottom: 30px;
+                padding-left: 8px;
+            }
+            .logo-icon {
+                width: 28px;
+                height: 28px;
+                background: #4F46E5;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .menu {
+                list-style: none;
+            }
+            .menu li {
+                padding: 12px 10px;
+                margin-bottom: 6px;
+                border-radius: 6px;
+                font-size: 14px;
+                display: flex;
+                gap: 12px;
+                align-items: center;
+            }
+            .menu li.active {
+                background: #4F46E5;
+                color: white;
+            }
+            .profile {
+                position: absolute;
+                bottom: 25px;
+                left: 20px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+            .profile-img {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                background: #D97706;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .profile b,
+            .profile small {
+                display: block;
+            }
+            .profile b {
+                color: white;
+                font-size: 12px;
+            }
+            .profile small {
+                font-size: 10px;
+            }
+            .main {
+                flex: 1;
+                min-width: 0;
+            }
+            header {
+                height: 64px;
+                background: white;
+                border-bottom: 1px solid #E2E8F0;
+                display: flex;
+                align-items: center;
+                padding: 0 28px;
+                justify-content: space-between;
+            }
+            .search {
+                color: #94A3B8;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            .search input {
+                border: none;
+                outline: none;
+                width: 220px;
+                font-size: 13px;
+            }
+            .header-right {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            .user {
+                height: 30px;
+                width: 30px;
+                background: #CBD5E1;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .hamburger {
+                display: none;
+                border: none;
+                background: none;
+                font-size: 22px;
+            }
+            .content {
+                padding: 32px;
+            }
+            .title {
+                margin-bottom: 24px;
+            }
+            .title h1 {
+                font-size: 24px;
+                font-weight: 700;
+            }
+            .title p {
+                font-size: 13px;
+                color: #64748B;
+                margin-top: 5px;
+            }
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+                margin-bottom: 24px;
+            }
+            .card {
+                background: white;
+                border: 1px solid #E2E8F0;
+                border-radius: 12px;
+                padding: 20px;
+            }
+            .card-icon {
+                height: 30px;
+                width: 30px;
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 12px;
+            }
+            .green {
+                color: #16A34A;
+                background: #DCFCE7;
+            }
+            .blue {
+                color: #2563EB;
+                background: #DBEAFE;
+            }
+            .purple {
+                color: #7C3AED;
+                background: #EDE9FE;
+            }
+            .orange {
+                color: #D97706;
+                background: #FEF3C7;
+            }
+            .card p {
+                color: #64748B;
+                font-size: 13px;
+            }
+            .card h2 {
+                font-size: 24px;
+                margin: 5px 0;
+            }
+            .up {
+                color: #16A34A;
+                font-size: 11px;
+            }
+            .up small {
+                color: #94A3B8;
+            }
+            .top-section {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 24px;
+                margin-bottom: 24px;
+            }
+            .bottom-section {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+            .box {
+                background: white;
+                border: 1px solid #E2E8F0;
+                border-radius: 12px;
+                padding: 20px;
+                min-width: 0;
+            }
+            .box-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            .box-title h3 {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .box-title p {
+                font-size: 12px;
+                color: #64748B;
+                margin-top: 4px;
+            }
+            .box-title h2 {
+                font-size: 22px;
+                margin-top: 5px;
+            }
+            .box-title a {
+                font-size: 11px;
+                color: #4F46E5;
+            }
+            .chart {
+                height: 220px;
+                position: relative;
+                padding-left: 35px;
+            }
+            .chart svg {
+                width: 100%;
+                height: 190px;
+            }
+            .y-axis {
+                position: absolute;
+                left: 0;
+                top: 5px;
+                height: 175px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                color: #94A3B8;
+                font-size: 9px;
+            }
+            .months {
+                display: flex;
+                justify-content: space-between;
+                font-size: 9px;
+                color: #94A3B8;
+            }
+            .table {
+                width: 100%;
+                overflow-x: auto;
+            }
+            .table-head,
+            .row {
+                display: grid;
+                grid-template-columns: 1.5fr 1fr 1fr;
+                gap: 10px;
+                min-width: 360px;
+                align-items: center;
+            }
+            .table-head {
+                color: #94A3B8;
+                font-size: 11px;
+                padding-bottom: 10px;
+            }
+            .row {
+                font-size: 11px;
+                padding: 10px 0;
+                border-top: 1px solid #F1F5F9;
+            }
+            .row b {
+                width: max-content;
+                padding: 4px 8px;
+                border-radius: 12px;
+                font-size: 9px;
+            }
+            .delivered {
+                background: #DCFCE7;
+                color: #16A34A;
+            }
+            .processing {
+                background: #FEF3C7;
+                color: #D97706;
+            }
+            .shipped {
+                background: #DBEAFE;
+                color: #2563EB;
+            }
+            .cancelled {
+                background: #FEE2E2;
+                color: #DC2626;
+            }
+            .traffic .box-title {
+                margin-bottom: 10px;
+            }
+            .traffic .box-title small {
+                color: #64748B;
+                font-size: 10px;
+            }
+            .bars {
+                height: 150px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-around;
+                gap: 12px;
+                padding-top: 15px;
+            }
+            .bars div {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 7px;
+                flex: 1;
+            }
+            .bars i {
+                display: block;
+                width: 22px;
+                background: #2563EB;
+                border-radius: 3px 3px 0 0;
+            }
+            .bars span {
+                font-size: 9px;
+                color: #64748B;
+            }
+            .product-head,
+            .product-row {
+                display: grid;
+                grid-template-columns: 1.5fr 1fr 1fr;
+                gap: 10px;
+                padding: 10px 0;
+                min-width: 300px;
+            }
+            .product-head {
+                color: #94A3B8;
+                font-size: 11px;
+            }
+            .product-row {
+                border-top: 1px solid #F1F5F9;
+                font-size: 11px;
+            }
+            .product-row b {
+                color: #16A34A;
+            }
+            .products {
+                overflow-x: auto;
+            }
+            .hamburger {
+                display: block;
+            }
+            header {
+                padding: 0 16px;
+            }
+            .search {
+                display: none;
+            }
+            .content {
+                padding: 20px 15px;
+            }
+            .cards {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .top-section,
+            .bottom-section {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .box {
+                padding: 15px;
+            }
+            .title h1 {
+                font-size: 22px;
+            }
+            .chart {
+                overflow: hidden;
+            }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">B</div>
+                <span>AdminPro</span>
+            </div>
+            <ul class="menu">
+                <li class="active">⌂ <span>Dashboard</span></li>
+                <li>⌁ <span>Analytics</span></li>
+                <li>♙ <span>Users</span></li>
+                <li>▣ <span>Orders</span></li>
+                <li>□ <span>Products</span></li>
+                <li>⚙ <span>Settings</span></li>
+            </ul>
+            <div class="profile">
+                <div class="profile-img">A</div>
+                <div>
+                    <b>Ashv Tiwari</b>
+                    <small>Admin</small>
+                </div>
+            </div>
+        </aside>
+        <main class="main">
+            <header>
+                <button class="hamburger">☰</button>
+                <div class="search">
+                    🔍 <input type="text" placeholder="Search...">
+                </div>
+                <div class="header-right">
+                    🔔
+                    <div class="user">A</div>
+                </div>
+            </header>
+            <section class="content">
+                <div class="title">
+                    <h1>Dashboard</h1>
+                    <p>Overview of your business performance</p>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-icon green">◉</div>
+                        <p>Total Revenue</p>
+                        <h2>₹1,24,532</h2>
+                        <span class="up">↑ 12% <small>from last month</small></span>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon blue">▣</div>
+                        <p>Total Orders</p>
+                        <h2>892</h2>
+                        <span class="up">↑ 6% <small>from last month</small></span>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon purple">♙</div>
+                        <p>Active Users</p>
+                        <h2>3,521</h2>
+                        <span class="up">↑ 14% <small>from last month</small></span>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon orange">▢</div>
+                        <p>Conversion Rate</p>
+                        <h2>4.2%</h2>
+                        <span class="up">↑ 2% <small>from last month</small></span>
+                    </div>
+                </div>
+                <div class="top-section">
+                    <div class="box revenue">
+                        <div class="box-title">
+                            <div>
+                                <h3>Revenue Overview</h3>
+                                <p>₹1,24,532</p>
+                            </div>
+                            <a>View all →</a>
+                        </div>
+                        <div class="chart">
+                            <div class="y-axis">
+                                <span>1.5L</span>
+                                <span>1L</span>
+                                <span>50k</span>
+                                <span>0</span>
+                            </div>
+                            <svg viewBox="0 0 600 220">
+                                <polyline
+                                    points="20,175 75,180 125,165 175,185 225,125 275,140 325,105 375,130 425,95 475,115 525,80 575,35"
+                                    fill="none" stroke="#4F46E5" stroke-width="3">
+                                </polyline>
+                                <polyline
+                                    points="20,175 75,180 125,165 175,185 225,125 275,140 325,105 375,130 425,95 475,115 525,80 575,35 575,210 20,210"
+                                    fill="#EEF2FF" stroke="none">
+                                </polyline>
+                            </svg>
+                            <div class="months">
+                                <span>Jan</span>
+                                <span>Feb</span>
+                                <span>Mar</span>
+                                <span>Apr</span>
+                                <span>May</span>
+                                <span>Jun</span>
+                                <span>Jul</span>
+                                <span>Aug</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box orders">
+                        <div class="box-title">
+                            <h3>Recent Orders</h3>
+                            <a>View all →</a>
+                        </div>
+                        <div class="table">
+                            <div class="table-head">
+                                <span>Customer</span>
+                                <span>Amount</span>
+                                <span>Status</span>
+                            </div>
+                            <div class="row">
+                                <span>Rahul Sharma</span>
+                                <span>₹2,499</span>
+                                <b class="delivered">Delivered</b>
+                            </div>
+                            <div class="row">
+                                <span>Priya Singh</span>
+                                <span>₹4,099</span>
+                                <b class="processing">Processing</b>
+                            </div>
+                            <div class="row">
+                                <span>Amit Kumar</span>
+                                <span>₹1,299</span>
+                                <b class="shipped">Shipped</b>
+                            </div>
+                            <div class="row">
+                                <span>Neha Gupta</span>
+                                <span>₹2,799</span>
+                                <b class="delivered">Delivered</b>
+                            </div>
+                            <div class="row">
+                                <span>Sahil Verma</span>
+                                <span>₹1,499</span>
+                                <b class="cancelled">Cancelled</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-section">
+                    <div class="box traffic">
+                        <div class="box-title">
+                            <div>
+                                <h3>Traffic Overview</h3>
+                                <h2>8,432</h2>
+                                <small>Total Visitors</small>
+                            </div>
+                            <span class="up">↑ 18%</span>
+                        </div>
+                        <div class="bars">
+                            <div><i style="height:45%"></i><span>Mon</span></div>
+                            <div><i style="height:60%"></i><span>Tue</span></div>
+                            <div><i style="height:55%"></i><span>Wed</span></div>
+                            <div><i style="height:68%"></i><span>Thu</span></div>
+                            <div><i style="height:82%"></i><span>Fri</span></div>
+                            <div><i style="height:62%"></i><span>Sat</span></div>
+                            <div><i style="height:100%"></i><span>Sun</span></div>
+                        </div>
+                    </div>
+                    <div class="box products">
+                        <div class="box-title">
+                            <h3>Top Products</h3>
+                            <a>View all →</a>
+                        </div>
+                        <div class="product-head">
+                            <span>Product</span>
+                            <span>Sales</span>
+                            <span>Change</span>
+                        </div>
+                        <div class="product-row">
+                            <span>Laptop Pro</span>
+                            <span>2,450</span>
+                            <b>+12%</b>
+                        </div>
+                        <div class="product-row">
+                            <span>Wireless Earbuds</span>
+                            <span>1,990</span>
+                            <b>+8%</b>
+                        </div>
+                        <div class="product-row">
+                            <span>Smart Watch</span>
+                            <span>1,203</span>
+                            <b>+6%</b>
+                        </div>
+                        <div class="product-row">
+                            <span>Backpack</span>
+                            <span>902</span>
+                            <b>+4%</b>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
