@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>
+            My Webpage
+        </title>
+        <style>
+            
+            .sub{
+                margin-top:8px;
+            }
+            nav{
+                background-color:black;
+                padding:10px;
+                display:flex;
+               gap:280px;
+                /* justify-content: space-around; */
+               
+            }
+            nav a{
+                color:white;
+                text-decoration:none;
+                font-size:18px;
+                
+                
+            }
+            .first{
+                margin-left:2px;
+            }
+            .container{
+                height:150px;
+                width:800px;
+                padding:20px;
+                grid-template-columns: repeat(4, 1fr);
+                border:3px solid red;
+                margin-top:40px;
+                display:grid;
+                gap:4px;
+             
+                
+            }
+            .box1,
+            .box2,
+            .box3,
+            .box4 {
+                display: grid;
+                place-items: center;
+            }
+        .box1 {
+          
+            background-color:rgb(45, 170, 47)
+        }
+
+        .box2 {
+          
+             background-color:rgb(133, 185, 237)
+        }
+
+        .box3 {
+         
+             background-color:red
+        }
+
+        .box4 {
+        
+             background-color:rgb(197, 228, 72)
+        } 
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="#" class="first">Home</a>
+            <a href="#">ABout</a>
+            <a href="#">CLick</a>
+            <a href="#">Steps</a>
+        </nav>
+        <div class="container">
+            <div class="box1">Home</div>
+            <div class="box2"> ABout</div>
+            <div class="box3">Services</div>
+            <div class="box4"> Contact</div>
+            
+            <div class="box1">Home</div>
+            <div class="box2"> ABout</div>
+            <div class="box3">Services</div>
+            <div class="box4"> Contact</div>
+        </div>
+          
+        
+
+    </body>
+</html>

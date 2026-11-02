@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+    <style>
+        /* ================= NAVBAR ================= */
+        nav {
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            font-size: 28px;
+        }
+        nav > a {
+            text-decoration: none;
+        }
+        .search {
+            height: 30px;
+            width: 400px;
+        }
+        .search-box {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .left {
+            display: flex;
+            gap: 20px;
+        }
+        /* ================= MAIN CONTAINER ================= */
+        .container {
+            width: 100%;
+            min-height: 1400px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        /* ================= COLUMN ================= */
+        .column {
+           width: 100%;
+        }
+        /* ================= CARD ================= */
+        .card {
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 15px;
+        }
+        /* ================= CARD 1 ================= */
+        .left1 {
+            height: 400px;
+            background-color: red;
+        }
+        .left1inner {
+            background-color: antiquewhite;
+        }
+        /* ================= CARD 2 ================= */
+        .left2 {
+            height: 300px;
+            background-color: rgb(20, 170, 190);
+        }
+        .left2inner {
+            background-color: antiquewhite;
+        }
+        /* ================= CARD 3 ================= */
+        .left3 {
+            height: 450px;
+            background-color: rgb(220, 180, 30);
+        }
+        .left3inner {
+            background-color: antiquewhite;
+        }
+        /* ================= CARD 4 ================= */
+        .left4 {
+            height: 380px;
+            background-color: rgb(130, 90, 190);
+        }
+        .left4inner {
+            background-color: antiquewhite;
+        }
+        /* ================= CARD 5 ================= */
+        .left5 {
+            height: 250px;
+            background-color: rgb(30, 180, 100);
+        }
+        .left5inner {
+            background-color: antiquewhite;
+        }
+        /* ================= CARD 6 ================= */
+        .left6 {
+            height: 250px;
+            background-color: rgb(40, 180, 60);
+        }
+        .left6inner {
+            background-color: antiquewhite;
+        }
+        /* ================= CARD 7 ================= */
+        .left7 {
+            height: 300px;
+            background-color: rgb(100, 150, 220);
+        }
+        .left7inner {
+            background-color: antiquewhite;
+        }
+        /* ================= CARD 8 ================= */
+        .left8 {
+            height: 250px;
+            background-color: rgb(220, 50, 200);
+        }
+        .left8inner {
+            background-color: antiquewhite;
+        }
+        /* ================= CARD 9 ================= */
+        .left9 {
+            height: 450px;
+            background-color: rgb(200, 140, 100);
+        }
+        .left9inner {
+            background-color: antiquewhite;
+        }
+        /* ================= TEXT ================= */
+        .left1inner p,
+        .left2inner p,
+        .left3inner p,
+        .left4inner p,
+        .left5inner p,
+        .left6inner p,
+        .left7inner p,
+        .left8inner p,
+        .left9inner p {
+            margin: 10px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .search {
+                width: 250px;
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .search {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <nav>
+        <a href="#">TilePress</a>
+        <div class="search-box">
+            <input type="text" placeholder="Search for ideas" class="search">
+        </div>
+        <div class="left">
+            <a href="#">🛎️</a>
+            <a href="#">📦</a>
+            <a href="#">🧑🏻‍✈️</a>
+        </div>
+    </nav>
+    <!-- ================= MAIN ================= -->
+    <div class="container">
+
+        <!-- ========== COLUMN 1 ========== -->
+        <div class="column">
+            <div class="card">
+                <div class="left1">
+                </div>
+                <div class="left1inner">
+                    <p>
+                        Autumn cabin mood board
+                    </p>
+                    <p>
+                        ⚪ @urban
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left6">
+                </div>
+                <div class="left6inner">
+                    <p>
+                        Green garden ideas
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ========== COLUMN 2 ========== -->
+        <div class="column">
+            <div class="card">
+                <div class="left2">
+                </div>
+                <div class="left2inner">
+                    <p>
+                        Minimal desk setup
+                    </p>
+                    <p>
+                        ⚪ @interiors
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left7">
+                </div>
+                <div class="left7inner">
+                    <p>
+                        Modern bedroom
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ========== COLUMN 3 ========== -->
+        <div class="column">
+            <div class="card">
+                <div class="left3">
+                </div>
+                <div class="left3inner">
+                    <p>
+                        Terracotta kitchen renovation
+                    </p>
+                    <p>
+                        Home and interior ideas
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ========== COLUMN 4 ========== -->
+        <div class="column">
+            <div class="card">
+                <div class="left4">
+                </div>
+                <div class="left4inner">
+                    <p>
+                        Lavender field wallpaper
+                    </p>
+                    <p>
+                        ⚪ @design
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left8">
+                </div>
+                <div class="left8inner">
+                    <p>
+                        Creative ideas
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ========== COLUMN 5 ========== -->
+        <div class="column">
+            <div class="card">
+                <div class="left5">
+                </div>
+                <div class="left5inner">
+                    <p>
+                        Weekend hike essentials
+                    </p>
+                    <p>
+                        ⚪ @outdoors
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="left9">
+                </div>
+                <div class="left9inner">
+                    <p>
+                        Outdoor setup
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

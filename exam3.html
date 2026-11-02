@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>
+            My Webpage
+        </title>
+        <style>
+        @media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+        height: auto;
+
+        grid-template-areas:
+            "box1"
+            "box2"
+            "box3"
+            "box4"
+            "box5"
+            "box6";
+    }
+
+}
+           .container{
+               width:600px;
+               height:600px;
+               border:5px solid rgb(191, 220, 233);
+              
+               display:grid;
+               gap:20px;
+               grid-template-areas:
+               "box1 box2 box3"
+               "box4 box5 box6"
+
+           } 
+           .box1{
+            grid-area:box1;
+            background-color:red;
+             border-radius:10px;
+           }
+           .box2{
+            grid-area:box2;
+              border-radius:10px;
+            background-color:rgb(201, 40, 185);
+           }
+           .box3{
+            grid-area:box3;
+              border-radius:10px;
+            background-color:rgb(212, 237, 19);
+           }
+           .box4{
+            grid-area:box4;
+              border-radius:10px;
+            background-color:rgb(25, 202, 63);
+           }
+           .box5{
+            grid-area:box5;
+              border-radius:10px;
+            background-color:rgb(20, 199, 202);
+           }
+           .box6{
+            grid-area:box6;
+              border-radius:10px;
+            background-color:rgb(38, 25, 122);
+           }
+           .box1,
+            .box2,
+            .box3,
+            .box4 ,
+            .box5,
+            .box6{
+                display: grid;
+                place-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box1">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+            <div class="box4">4</div>
+            <div class="box5">5</div>
+            <div class="box6">6</div>
+
+        </div>
+        
+
+    </body>
+</html>
